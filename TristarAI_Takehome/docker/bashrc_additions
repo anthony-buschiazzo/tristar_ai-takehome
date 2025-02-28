@@ -1,0 +1,26 @@
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+if [ -f /etc/profile.d/rtk-rosdistro.sh ]; then
+  . /etc/profile.d/rtk-rosdistro.sh
+fi
+
+. $HOME/.bash_prompt
+
+# source /opt/ros/humble/setup.bash
+
+# source /home/unc_seg/pkgs_ws/install/setup.bash
+
+export GPG_TTY=$(tty)
+
+# export PYTHONPATH="/usr/local/lib/python3.10/dist-packages:/home/unc_seg/pkgs_ws/install/ontology_manager/local/lib/python3.10/dist-packages/:${PYTHONPATH}"
+
+alias python=python3
+
+cd $HOME/takehome_ws
+
